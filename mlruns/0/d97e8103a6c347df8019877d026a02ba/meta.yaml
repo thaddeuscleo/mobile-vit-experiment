@@ -1,0 +1,16 @@
+artifact_uri: file:///home/cleo/DeepLearning/mobile-vit/mlruns/0/d97e8103a6c347df8019877d026a02ba/artifacts
+deleted_time: 1683859013323
+end_time: 1683849563890
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: d97e8103a6c347df8019877d026a02ba
+run_name: gifted-tern-491
+run_uuid: d97e8103a6c347df8019877d026a02ba
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683849139455
+status: 3
+tags: []
+user_id: cleo

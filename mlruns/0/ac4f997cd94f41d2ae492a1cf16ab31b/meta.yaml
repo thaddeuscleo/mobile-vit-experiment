@@ -1,0 +1,16 @@
+artifact_uri: file:///home/cleo/DeepLearning/mobile-vit/mlruns/0/ac4f997cd94f41d2ae492a1cf16ab31b/artifacts
+deleted_time: 1683859013342
+end_time: 1683849967903
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: ac4f997cd94f41d2ae492a1cf16ab31b
+run_name: intrigued-moose-747
+run_uuid: ac4f997cd94f41d2ae492a1cf16ab31b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683849649064
+status: 3
+tags: []
+user_id: cleo

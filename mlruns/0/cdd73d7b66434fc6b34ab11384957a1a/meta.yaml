@@ -1,0 +1,16 @@
+artifact_uri: file:///home/cleo/DeepLearning/mobile-vit/mlruns/0/cdd73d7b66434fc6b34ab11384957a1a/artifacts
+deleted_time: 1683856773521
+end_time: 1683856413729
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: cdd73d7b66434fc6b34ab11384957a1a
+run_name: judicious-slug-296
+run_uuid: cdd73d7b66434fc6b34ab11384957a1a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683856383941
+status: 3
+tags: []
+user_id: cleo

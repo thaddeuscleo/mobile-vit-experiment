@@ -1,0 +1,16 @@
+artifact_uri: file:///home/cleo/DeepLearning/mobile-vit/mlruns/0/c34168120ec74212bba99cd2e665efd2/artifacts
+deleted_time: 1683859013345
+end_time: 1683855352304
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: c34168120ec74212bba99cd2e665efd2
+run_name: mysterious-moose-284
+run_uuid: c34168120ec74212bba99cd2e665efd2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683854813756
+status: 3
+tags: []
+user_id: cleo

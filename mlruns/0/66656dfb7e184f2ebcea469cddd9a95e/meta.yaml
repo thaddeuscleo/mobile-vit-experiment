@@ -1,0 +1,15 @@
+artifact_uri: file:///home/cleo/DeepLearning/mobile-vit/mlruns/0/66656dfb7e184f2ebcea469cddd9a95e/artifacts
+end_time: 1683859624574
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 66656dfb7e184f2ebcea469cddd9a95e
+run_name: gifted-asp-339
+run_uuid: 66656dfb7e184f2ebcea469cddd9a95e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683859221056
+status: 3
+tags: []
+user_id: cleo

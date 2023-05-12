@@ -1,0 +1,16 @@
+artifact_uri: file:///home/cleo/DeepLearning/mobile-vit/mlruns/0/1489458d9dbb405db68fbeed7733b153/artifacts
+deleted_time: 1683859013347
+end_time: 1683856208792
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 1489458d9dbb405db68fbeed7733b153
+run_name: defiant-crane-880
+run_uuid: 1489458d9dbb405db68fbeed7733b153
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683855519187
+status: 3
+tags: []
+user_id: cleo

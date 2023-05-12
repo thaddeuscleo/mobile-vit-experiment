@@ -1,0 +1,16 @@
+artifact_uri: file:///home/cleo/DeepLearning/mobile-vit/mlruns/0/ba35f2c308564ce5ad74309482f310c9/artifacts
+deleted_time: 1683859013348
+end_time: 1683856960183
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: ba35f2c308564ce5ad74309482f310c9
+run_name: painted-squirrel-554
+run_uuid: ba35f2c308564ce5ad74309482f310c9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683856421193
+status: 3
+tags: []
+user_id: cleo

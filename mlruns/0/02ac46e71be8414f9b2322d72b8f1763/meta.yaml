@@ -1,0 +1,15 @@
+artifact_uri: file:///home/cleo/DeepLearning/mobile-vit/mlruns/0/02ac46e71be8414f9b2322d72b8f1763/artifacts
+end_time: 1683857395431
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 02ac46e71be8414f9b2322d72b8f1763
+run_name: omniscient-wren-224
+run_uuid: 02ac46e71be8414f9b2322d72b8f1763
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683857103647
+status: 3
+tags: []
+user_id: cleo

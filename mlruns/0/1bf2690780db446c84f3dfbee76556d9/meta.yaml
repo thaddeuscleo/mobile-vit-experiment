@@ -1,0 +1,16 @@
+artifact_uri: file:///home/cleo/DeepLearning/mobile-vit/mlruns/0/1bf2690780db446c84f3dfbee76556d9/artifacts
+deleted_time: 1683859013344
+end_time: 1683850306533
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 1bf2690780db446c84f3dfbee76556d9
+run_name: delicate-mouse-301
+run_uuid: 1bf2690780db446c84f3dfbee76556d9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683849987795
+status: 3
+tags: []
+user_id: cleo

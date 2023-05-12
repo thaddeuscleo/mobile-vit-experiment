@@ -1,0 +1,15 @@
+artifact_uri: file:///home/cleo/DeepLearning/mobile-vit/mlruns/0/3b5023db96844929a148ce9e962aa06e/artifacts
+end_time: 1683862022922
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3b5023db96844929a148ce9e962aa06e
+run_name: shivering-hare-39
+run_uuid: 3b5023db96844929a148ce9e962aa06e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683861611306
+status: 3
+tags: []
+user_id: cleo

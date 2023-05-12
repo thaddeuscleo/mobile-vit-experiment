@@ -1,0 +1,16 @@
+artifact_uri: file:///home/cleo/DeepLearning/mobile-vit/mlruns/0/309a9fdcd35b45b385a3cc667188db0b/artifacts
+deleted_time: 1683852366123
+end_time: 1683850814893
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 309a9fdcd35b45b385a3cc667188db0b
+run_name: secretive-ape-619
+run_uuid: 309a9fdcd35b45b385a3cc667188db0b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683850324413
+status: 3
+tags: []
+user_id: cleo

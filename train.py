@@ -1,5 +1,4 @@
-from mlflow import log_metric, log_params, log_artifacts
-
+from mlflow import log_metric, log_params, log_artifacts, log_metrics
 import tensorflow as tf
 
 from keras.applications import imagenet_utils
@@ -155,38 +154,15 @@ def create_mobilevit(num_classes=5):
 
     return keras.Model(inputs, outputs)
 
+# Hyperparameter
+learning_rate = 0.00002
+label_smoothing_factor = 0.001
+epochs = 150
 
-mobilevit_xxs = create_mobilevit()
-mobilevit_xxs.summary()
-
-batch_size = 64
+batch_size = 32
 auto = tf.data.AUTOTUNE
 resize_bigger = 280
 num_classes = 3
-
-def preprocess_dataset(is_training=True):
-    def _pp(image, label):
-        if is_training:
-            # Resize to a bigger spatial resolution and take the random
-            # crops.
-            # print(image_size)
-            image = tf.image.resize(image, (resize_bigger, resize_bigger))
-            image = tf.image.random_crop(image[0], size=(image_size, image_size, 3))
-            image = tf.image.random_flip_left_right(image)
-        else:
-            image = tf.image.resize(image, (image_size, image_size))
-            image = image[0]
-            label = tf.one_hot(label, depth=num_classes)
-        return image, label
-
-    return _pp
-
-
-def prepare_dataset(dataset, is_training=True):
-    if is_training:
-        dataset = dataset.shuffle(batch_size * 10)
-    dataset = dataset.map(preprocess_dataset(is_training), num_parallel_calls=auto)
-    return dataset.batch(batch_size).prefetch(auto)
 
 train_dataset_dir = "./Banana_Condensed_Three_Cat"
 
@@ -199,7 +175,8 @@ train_dataset, val_dataset = tf.keras.utils.image_dataset_from_directory(
     shuffle=True,
     validation_split=0.2,
     subset="both",
-    seed=42
+    seed=42,
+    batch_size=batch_size
 )
 
 # import tensorflow_datasets as tfds
@@ -225,16 +202,21 @@ for idx, cnt in enumerate(train_df['count']):
     train_weight[idx] =  (cnt) / (12.0 * 14762)
 
 
-# Hyperparameter
-learning_rate = 0.00002
-label_smoothing_factor = 0.1
-epochs = 70
-
 log_params({
     "learning_rate": learning_rate,
     "label_smoothing_factor": label_smoothing_factor,
-    "epochs": epochs
+    "epochs": epochs,
+    "batch_size": batch_size
 })
+
+class MLFlowCallback(keras.callbacks.Callback):
+    def on_epoch_end(self, epoch, logs=None):
+        log_metrics({
+            "loss": logs["loss"],
+            "accuracy": logs["accuracy"],
+            "val_loss": logs["val_loss"],
+            "val_accuracy": logs["val_accuracy"]
+            })
 
 optimizer = keras.optimizers.Adam(learning_rate=learning_rate)
 loss_fn = keras.losses.CategoricalCrossentropy(label_smoothing=label_smoothing_factor)
@@ -275,7 +257,7 @@ def run_experiment(epochs=epochs):
         train_dataset,
         validation_data=val_dataset,
         epochs=epochs,
-        callbacks=[checkpoint_callback, early_stopping_callback],
+        callbacks=[checkpoint_callback, early_stopping_callback, MLFlowCallback()],
         class_weight=train_weight
     )
 
@@ -287,11 +269,7 @@ def run_experiment(epochs=epochs):
 
 mobilevit_xxs = run_experiment()
 
-# !rm -rf "/content/saved_model"
-# !mkdir -p saved_model
-
 # Serialize the model as a SavedModel.
-# mobilevit_xxs.save("saved_model/mobilevit_xxs")
 import pickle
 
 # Save the model weights
@@ -309,7 +287,6 @@ f = open('./saved_model/labels.pickle', "wb")
 f.write(pickle.dumps(CLASS_NAMES))
 f.close()
 
-log_artifacts("./saved_model")
 
 def get_confusion_matrix(model, validation_dataset):
     all_predictions = np.array([])
@@ -326,10 +303,12 @@ def get_confusion_matrix(model, validation_dataset):
 
 
 conffusion_mtx = get_confusion_matrix(mobilevit_xxs, val_dataset)
-
 conffusion_mtx_df = pd.DataFrame(conffusion_mtx, index=val_dataset.class_names, columns=val_dataset.class_names)
-plt.figure(figsize=(10,7))
-sns.heatmap(conffusion_mtx_df, annot=True)
+conffusion_plot = sns.heatmap(conffusion_mtx_df, annot=True)
+fig = conffusion_plot.get_figure()
+fig.savefig('./saved_model/conffusion_plot.png')
+
+log_artifacts("./saved_model")
 
 loss, accuracy, f1_score, precision, recall = mobilevit_xxs.evaluate(val_dataset.take(1), verbose=0)
 print(f"loss: {loss}")
@@ -338,8 +317,6 @@ print(f"f1_score: {f1_score}")
 print(f"precision: {precision}")
 print(f"recall: {recall}")
 
-log_metric("loss", loss)
-log_metric("accuracy", accuracy * 100)
 log_metric("f1_score", f1_score)
 log_metric("precision", precision)
 log_metric("recall", recall)

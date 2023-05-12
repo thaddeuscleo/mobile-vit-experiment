@@ -1,0 +1,15 @@
+artifact_uri: file:///home/cleo/DeepLearning/mobile-vit/mlruns/0/25a833b8147b48fd865d64a30870df0c/artifacts
+end_time: 1683859212291
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 25a833b8147b48fd865d64a30870df0c
+run_name: enchanting-steed-204
+run_uuid: 25a833b8147b48fd865d64a30870df0c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683858959600
+status: 3
+tags: []
+user_id: cleo

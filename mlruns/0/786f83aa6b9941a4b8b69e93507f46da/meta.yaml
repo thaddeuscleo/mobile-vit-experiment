@@ -1,0 +1,16 @@
+artifact_uri: file:///home/cleo/DeepLearning/mobile-vit/mlruns/0/786f83aa6b9941a4b8b69e93507f46da/artifacts
+deleted_time: 1683851585554
+end_time: 1683851500857
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 786f83aa6b9941a4b8b69e93507f46da
+run_name: sedate-goat-134
+run_uuid: 786f83aa6b9941a4b8b69e93507f46da
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683851470873
+status: 3
+tags: []
+user_id: cleo

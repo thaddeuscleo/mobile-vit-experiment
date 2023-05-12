@@ -1,0 +1,16 @@
+artifact_uri: file:///home/cleo/DeepLearning/mobile-vit/mlruns/0/6783d42c9e4f48ffa00c7b488a9be8c1/artifacts
+deleted_time: 1683852366123
+end_time: 1683851269867
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 6783d42c9e4f48ffa00c7b488a9be8c1
+run_name: intrigued-dog-548
+run_uuid: 6783d42c9e4f48ffa00c7b488a9be8c1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683850838721
+status: 3
+tags: []
+user_id: cleo

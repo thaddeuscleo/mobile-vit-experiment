@@ -1,0 +1,16 @@
+artifact_uri: file:///home/cleo/DeepLearning/mobile-vit/mlruns/0/1cad0285746d4e299aef36dc62405bd6/artifacts
+deleted_time: 1683856396406
+end_time: 1683856359433
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 1cad0285746d4e299aef36dc62405bd6
+run_name: bemused-cow-596
+run_uuid: 1cad0285746d4e299aef36dc62405bd6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683856339524
+status: 3
+tags: []
+user_id: cleo

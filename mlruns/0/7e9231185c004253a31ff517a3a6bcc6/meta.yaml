@@ -1,0 +1,16 @@
+artifact_uri: file:///home/cleo/DeepLearning/mobile-vit/mlruns/0/7e9231185c004253a31ff517a3a6bcc6/artifacts
+deleted_time: 1683852366125
+end_time: 1683851996767
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 7e9231185c004253a31ff517a3a6bcc6
+run_name: worried-roo-84
+run_uuid: 7e9231185c004253a31ff517a3a6bcc6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683851591620
+status: 3
+tags: []
+user_id: cleo
